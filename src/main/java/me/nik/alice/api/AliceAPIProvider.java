@@ -1,13 +1,13 @@
 package me.nik.alice.api;
 
 public class AliceAPIProvider {
-    private static AliceAPI aliceAPI = null;
+    private static AliceAPI API = null;
 
     public AliceAPIProvider() {
     }
 
     public static AliceAPI getAPI() {
-        return aliceAPI;
+        return API;
     }
 
     /**
@@ -17,6 +17,6 @@ public class AliceAPIProvider {
      */
     @Deprecated
     public static void register(AliceAPI api) {
-        aliceAPI = api;
+        API = api;
     }
 }
