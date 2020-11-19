@@ -1,7 +1,6 @@
 package me.nik.alice.api.enums;
 
 public enum CheckType {
-
     AIMBOT("Aimbot"),
     AUTOCLICKER("AutoClicker"),
     BADPACKETS("BadPackets"),
@@ -12,8 +11,11 @@ public enum CheckType {
     SCAFFOLD("Scaffold"),
     SPEED("Speed"),
     NOFALL("NoFall"),
+    PHASE("Phase"),
     JESUS("Jesus"),
     FASTBOW("FastBow"),
+    PLAYERESP("PlayerESP"),
+    HEALTHTAG("HealthTag"),
     ELYTRA("Elytra"),
     FASTEAT("FastEat"),
     FASTREGEN("FastRegen"),
