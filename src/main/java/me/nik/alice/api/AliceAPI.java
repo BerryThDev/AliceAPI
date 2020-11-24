@@ -59,9 +59,17 @@ public interface AliceAPI {
     /**
      * Get the Violations of a Player for a specific Check
      *
-     * @param player The player to get the Violations from
+     * @param player    The player to get the Violations from
      * @param checkType The check to get the Violations from
      * @return The player's Violations for that check
      */
     int getViolations(Player player, CheckType checkType);
+
+    /**
+     * Get the Violations of a Player for all Checks
+     *
+     * @param player The player to get the Violations from
+     * @return The player's Violations
+     */
+    int getTotalViolations(Player player);
 }
