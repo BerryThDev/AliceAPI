@@ -16,6 +16,7 @@ public enum CheckType {
     FASTBOW("FastBow"),
     PLAYERESP("PlayerESP"),
     HEALTHTAG("HealthTag"),
+    VEHICLE("Vehicle"),
     ELYTRA("Elytra"),
     FASTEAT("FastEat"),
     FASTREGEN("FastRegen"),
