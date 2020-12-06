@@ -24,6 +24,7 @@ public enum CheckType {
     VELOCITY("Velocity"),
     INVENTORY("Inventory"),
     INTERACT("Interact"),
+    XRAY("XRay"),
     HITBOX("Hitbox");
 
     private final String checkName;
