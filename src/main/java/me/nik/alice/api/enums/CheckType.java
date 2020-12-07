@@ -10,6 +10,7 @@ public enum CheckType {
     KILLAURA("KillAura"),
     SCAFFOLD("Scaffold"),
     SPEED("Speed"),
+    MOTION("Motion"),
     NOFALL("NoFall"),
     PHASE("Phase"),
     JESUS("Jesus"),

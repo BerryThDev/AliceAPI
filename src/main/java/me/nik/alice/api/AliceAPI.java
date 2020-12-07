@@ -32,10 +32,10 @@ public interface AliceAPI {
      * Give a player the permission to bypass
      * For a specific amount of seconds
      *
-     * @param player The player
+     * @param player  The player
      * @param seconds Seconds
      */
-    void setTempBypass(Player player, int seconds);
+    void setTempBypass(Player player, long seconds);
 
     /**
      * Register a Punish Animation
