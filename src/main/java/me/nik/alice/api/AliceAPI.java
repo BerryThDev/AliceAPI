@@ -29,6 +29,14 @@ public interface AliceAPI {
     boolean isBypassing(Player player);
 
     /**
+     * Get if a player is temporarily bypassing
+     *
+     * @param player The player
+     * @return Whether or not the player is temporarily bypassing
+     */
+    boolean isTempBypassing(Player player);
+
+    /**
      * Give a player the permission to bypass
      * For a specific amount of seconds
      *
