@@ -1,7 +1,7 @@
 package me.nik.alice.api.enums;
 
 public enum CheckType {
-    AIMBOT("Aimbot"),
+    AIMASSIST("AimAssist"),
     AUTOCLICKER("AutoClicker"),
     BADPACKETS("BadPackets"),
     CRITICALS("Criticals"),

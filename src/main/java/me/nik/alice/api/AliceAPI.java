@@ -29,6 +29,13 @@ public interface AliceAPI {
     boolean isBypassing(Player player);
 
     /**
+     * Punish a player
+     *
+     * @param player The player
+     */
+    void punish(String player, String reason);
+
+    /**
      * Get if a player is temporarily bypassing
      *
      * @param player The player
