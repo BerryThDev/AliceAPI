@@ -1,6 +1,5 @@
 package me.nik.alice.api;
 
-import me.nik.alice.api.enums.CheckType;
 import org.bukkit.entity.Player;
 
 public interface AliceAPI {
@@ -36,21 +35,11 @@ public interface AliceAPI {
     void punish(String player, String reason);
 
     /**
-     * Get if a player is temporarily bypassing
+     * Send an alert to the Online Admins
      *
-     * @param player The player
-     * @return Whether or not the player is temporarily bypassing
+     * @param message The message
      */
-    boolean isTempBypassing(Player player);
-
-    /**
-     * Give a player the permission to bypass
-     * For a specific amount of seconds
-     *
-     * @param player  The player
-     * @param seconds Seconds
-     */
-    void setTempBypass(Player player, long seconds);
+    void sendAlert(String message);
 
     /**
      * Register a Punish Animation
@@ -61,24 +50,24 @@ public interface AliceAPI {
 
     /**
      * Add violations to a Player for a specific Check
-     *
+     * <p>
      * The amount of Violations to add is the configured
      * VL Weight for the specified check.
      *
-     * @param player The player to Flag
-     * @param checkType The check to flag that player for
+     * @param player  The player to Flag
+     * @param check   The check to flag that player for
      * @param verbose The verbose message
      */
-    void flag(Player player, CheckType checkType, String verbose);
+    void flag(Player player, String check, String verbose);
 
     /**
      * Get the Violations of a Player for a specific Check
      *
-     * @param player    The player to get the Violations from
-     * @param checkType The check to get the Violations from
+     * @param player The player to get the Violations from
+     * @param check  The check to get the Violations from
      * @return The player's Violations for that check
      */
-    int getViolations(Player player, CheckType checkType);
+    int getViolations(Player player, String check);
 
     /**
      * Get the Violations of a Player for all Checks
