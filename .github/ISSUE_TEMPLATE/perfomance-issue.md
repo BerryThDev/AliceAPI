@@ -2,7 +2,7 @@
 name: Perfomance Issue
 about: The plugin is causing Perfomance Issues
 title: "[PERFOMANCE]"
-labels: Perfomance
+labels: ''
 assignees: NikV2
 
 ---
