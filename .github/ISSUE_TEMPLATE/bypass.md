@@ -2,7 +2,7 @@
 name: Bypass
 about: A hack that bypassed Alice
 title: "[BYPASS]"
-labels: ''
+labels: Bypass
 assignees: NikV2
 
 ---

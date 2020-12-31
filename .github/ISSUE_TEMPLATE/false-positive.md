@@ -2,7 +2,7 @@
 name: False Positive
 about: A false positive caused by Alice
 title: "[FALSE POSITIVE]"
-labels: ''
+labels: False Positive
 assignees: NikV2
 
 ---
