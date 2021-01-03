@@ -15,6 +15,9 @@ Be marked as Invalid.
 **Timings**
 Provide your server's timings report
 
+**Profiler Result (Optional)**
+Provide a profiler result by using Alice's Built-In profiler
+
 **Is the plugin up to date?**
 Yes/No
 
