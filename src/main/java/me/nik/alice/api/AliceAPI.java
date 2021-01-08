@@ -61,6 +61,19 @@ public interface AliceAPI {
     void flag(Player player, String check, String verbose);
 
     /**
+     * Add violations to a Player for a specific Check and Type
+     * <p>
+     * The amount of Violations to add is the configured
+     * VL Weight for the specified check.
+     *
+     * @param player  The player to Flag
+     * @param check   The check to flag that player for
+     * @param type    The check type to flag that player for
+     * @param verbose The verbose message
+     */
+    void flag(Player player, String check, String type, String verbose);
+
+    /**
      * Get the Violations of a Player for a specific Check
      *
      * @param player The player to get the Violations from
