@@ -18,12 +18,13 @@ public final class AliceViolationEvent extends Event implements Cancellable {
     private final int vl;
     private final int totalVl;
     private final double buffer;
+    private final boolean experimental;
     private boolean cancel = false;
 
     /**
      * This event will not always be called Async, So beware.
      */
-    public AliceViolationEvent(Player player, String checkName, String description, String type, String information, int vl, int totalVl, double buffer) {
+    public AliceViolationEvent(Player player, String checkName, String description, String type, String information, int vl, int totalVl, double buffer, boolean experimental) {
         super(!Bukkit.isPrimaryThread());
         this.player = player;
         this.checkName = checkName;
@@ -33,6 +34,7 @@ public final class AliceViolationEvent extends Event implements Cancellable {
         this.vl = vl;
         this.totalVl = totalVl;
         this.buffer = buffer;
+        this.experimental = experimental;
     }
 
     public boolean isCancelled() {
@@ -101,6 +103,10 @@ public final class AliceViolationEvent extends Event implements Cancellable {
      */
     public Player getPlayer() {
         return player;
+    }
+
+    public boolean isExperimental() {
+        return experimental;
     }
 
     public HandlerList getHandlers() {
