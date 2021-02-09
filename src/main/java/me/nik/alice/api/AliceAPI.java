@@ -5,12 +5,11 @@ import org.bukkit.entity.Player;
 public interface AliceAPI {
 
     /**
-     * Gets a Player's Ping
+     * Make the player bypass internally without permissions
      *
-     * @param player the Player
-     * @return The player's ping
+     * @param player The player
      */
-    int getPing(Player player);
+    void setBypassing(Player player);
 
     /**
      * Gets the Server's last TPS
