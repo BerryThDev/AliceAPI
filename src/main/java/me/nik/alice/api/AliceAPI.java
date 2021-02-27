@@ -7,9 +7,10 @@ public interface AliceAPI {
     /**
      * Make the player bypass internally without permissions
      *
-     * @param player The player
+     * @param player    The player
+     * @param bypassing Whether or not the player should bypass
      */
-    void setBypassing(Player player);
+    void setBypassing(Player player, boolean bypassing);
 
     /**
      * Gets the Server's last TPS
