@@ -5,12 +5,12 @@ import org.bukkit.entity.Player;
 public interface AliceAPI {
 
     /**
-     * Make the player bypass internally without permissions
+     * Make the player bypass internally without permissions for a few seconds
      *
-     * @param player    The player
-     * @param bypassing Whether or not the player should bypass
+     * @param player  The player
+     * @param seconds The seconds to bypass
      */
-    void setBypassing(Player player, boolean bypassing);
+    void setTempBypass(Player player, long seconds);
 
     /**
      * Gets the Server's last TPS
