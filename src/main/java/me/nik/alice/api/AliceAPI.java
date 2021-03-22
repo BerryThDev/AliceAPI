@@ -89,4 +89,14 @@ public interface AliceAPI {
      * @return The player's Violations
      */
     int getTotalViolations(Player player);
+
+    /**
+     * Set the server name that Alice is going to use for Discord Notifications or player logs
+     * Internally
+     * <p>
+     * (NOTE: This is also going to reload the whole plugin)
+     *
+     * @param name The server name
+     */
+    void setServerName(String name);
 }
