@@ -16,15 +16,15 @@ public final class AliceViolationEvent extends Event implements Cancellable {
     private final String type;
     private final String information;
     private final int vl;
-    private final int totalVl;
-    private final double buffer;
+    private final int maxVl;
     private final boolean experimental;
+    private final boolean alert;
     private boolean cancel = false;
 
     /**
      * This event will not always be called Async, So beware.
      */
-    public AliceViolationEvent(Player player, String checkName, String description, String type, String information, int vl, int totalVl, double buffer, boolean experimental) {
+    public AliceViolationEvent(Player player, String checkName, String description, String type, String information, int vl, int maxVl, boolean experimental, boolean alert) {
         super(!Bukkit.isPrimaryThread());
         this.player = player;
         this.checkName = checkName;
@@ -32,9 +32,9 @@ public final class AliceViolationEvent extends Event implements Cancellable {
         this.type = type;
         this.information = information;
         this.vl = vl;
-        this.totalVl = totalVl;
-        this.buffer = buffer;
+        this.maxVl = maxVl;
         this.experimental = experimental;
+        this.alert = alert;
     }
 
     public boolean isCancelled() {
@@ -67,24 +67,17 @@ public final class AliceViolationEvent extends Event implements Cancellable {
     }
 
     /**
-     * @return The violations added in this event
+     * @return The total violation amount
      */
     public int getVl() {
         return vl;
     }
 
     /**
-     * @return The total violations
+     * @return The maximum violation amount
      */
-    public int getTotalVl() {
-        return totalVl;
-    }
-
-    /**
-     * @return The player's buffer
-     */
-    public double getBuffer() {
-        return buffer;
+    public int getMaxVl() {
+        return maxVl;
     }
 
     /**
@@ -105,8 +98,18 @@ public final class AliceViolationEvent extends Event implements Cancellable {
         return player;
     }
 
+    /**
+     * @return Whether or not the check is in an experimental state
+     */
     public boolean isExperimental() {
         return experimental;
+    }
+
+    /**
+     * @return Whether or not an alert will be sent
+     */
+    public boolean hasAlert() {
+        return alert;
     }
 
     public HandlerList getHandlers() {

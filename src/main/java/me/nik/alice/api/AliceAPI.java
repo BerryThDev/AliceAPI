@@ -13,6 +13,23 @@ public interface AliceAPI {
     void setTempBypass(Player player, long seconds);
 
     /**
+     * Update Alice's permission cache
+     */
+    void updatePermissionCache();
+
+    /**
+     * Update Alice's permission cache for a certain player
+     *
+     * @param player The player
+     */
+    void updatePermissionCache(Player player);
+
+    /**
+     * Clear Alice's permission cache
+     */
+    void clearPermissionCache();
+
+    /**
      * Gets the Server's last TPS
      *
      * @return The server's last TPS
