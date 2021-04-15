@@ -13,23 +13,6 @@ public interface AliceAPI {
     void setTempBypass(Player player, long seconds);
 
     /**
-     * Update Alice's permission cache
-     */
-    void updatePermissionCache();
-
-    /**
-     * Update Alice's permission cache for a certain player
-     *
-     * @param player The player
-     */
-    void updatePermissionCache(Player player);
-
-    /**
-     * Clear Alice's permission cache
-     */
-    void clearPermissionCache();
-
-    /**
      * Gets the Server's last TPS
      *
      * @return The server's last TPS
@@ -37,12 +20,20 @@ public interface AliceAPI {
     double getTPS();
 
     /**
-     * Get if a player is currently bypassing
+     * Get if a player is currently bypassing using permissions
      *
      * @param player The player
      * @return Whether or not the player is bypassing
      */
     boolean isBypassing(Player player);
+
+    /**
+     * Get if a player is temporarily bypassing without permissions
+     *
+     * @param player The player
+     * @return Whether or not the player is temporarily bypassing
+     */
+    boolean isTempBypassing(Player player);
 
     /**
      * Punish a player
@@ -67,9 +58,6 @@ public interface AliceAPI {
 
     /**
      * Add violations to a Player for a specific Check
-     * <p>
-     * The amount of Violations to add is the configured
-     * VL Weight for the specified check.
      *
      * @param player  The player to Flag
      * @param check   The check to flag that player for
@@ -79,9 +67,6 @@ public interface AliceAPI {
 
     /**
      * Add violations to a Player for a specific Check and Type
-     * <p>
-     * The amount of Violations to add is the configured
-     * VL Weight for the specified check.
      *
      * @param player  The player to Flag
      * @param check   The check to flag that player for
@@ -89,6 +74,16 @@ public interface AliceAPI {
      * @param verbose The verbose message
      */
     void flag(Player player, String check, String type, String verbose);
+
+    /**
+     * Set the violations to a player for a specific Check and Type
+     *
+     * @param player The player
+     * @param check  The check to set the violations
+     * @param type   The check type to set the violations
+     * @param vl     The violations to set
+     */
+    void setViolations(Player player, String check, String type, int vl);
 
     /**
      * Get the Violations of a Player for a specific Check
@@ -106,6 +101,30 @@ public interface AliceAPI {
      * @return The player's Violations
      */
     int getTotalViolations(Player player);
+
+    /**
+     * Get the Violations of a Player for all combat checks
+     *
+     * @param player The player to get the Violations from
+     * @return The player's Violations
+     */
+    int getCombatViolations(Player player);
+
+    /**
+     * Get the Violations of a Player for all movement checks
+     *
+     * @param player The player to get the Violations from
+     * @return The player's Violations
+     */
+    int getMovementViolations(Player player);
+
+    /**
+     * Get the Violations of a Player for all world checks
+     *
+     * @param player The player to get the Violations from
+     * @return The player's Violations
+     */
+    int getWorldViolations(Player player);
 
     /**
      * Set the server name that Alice is going to use for Discord Notifications or player logs
