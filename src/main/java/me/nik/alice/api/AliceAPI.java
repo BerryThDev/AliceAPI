@@ -20,12 +20,19 @@ public interface AliceAPI {
     double getTPS();
 
     /**
-     * Get if a player is currently bypassing using permissions
+     * Get if a player is currently bypassing
      *
      * @param player The player
      * @return Whether or not the player is bypassing
      */
     boolean isBypassing(Player player);
+
+    /**
+     * Update the player's bypass status and check if he has the permission again
+     *
+     * @param player The player
+     */
+    void updateBypass(Player player);
 
     /**
      * Get if a player is temporarily bypassing without permissions
