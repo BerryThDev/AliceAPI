@@ -1,6 +1,9 @@
 package me.nik.alice.api;
 
+import me.nik.alice.api.custom.CheckData;
 import org.bukkit.entity.Player;
+
+import java.util.Collection;
 
 public interface AliceAPI {
 
@@ -11,13 +14,6 @@ public interface AliceAPI {
      * @param seconds The seconds to bypass
      */
     void setTempBypass(Player player, long seconds);
-
-    /**
-     * Gets the Server's last TPS
-     *
-     * @return The server's last TPS
-     */
-    double getTPS();
 
     /**
      * Get if a player is currently bypassing
@@ -100,6 +96,14 @@ public interface AliceAPI {
      * @return The player's Violations for that check
      */
     int getViolations(Player player, String check);
+
+    /**
+     * Get a player's data for all checks
+     *
+     * @param player The player
+     * @return The player's check data
+     */
+    Collection<CheckData> getCheckData(Player player);
 
     /**
      * Get the Violations of a Player for all Checks
