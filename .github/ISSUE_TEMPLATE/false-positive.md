@@ -15,10 +15,10 @@ Be marked as Invalid.
 If the false positive was found on our Test Server, You may leave this empty
 
 **What client triggered the false positive?**
-The client's name, IE Vanilla or Sigma (False Positives reported by Bad PvP clients will be marked as Invalid)
+The client's name, IE Vanilla or Sigma
 
 **Verbose Messages**
-The verbose messages that showed up by using /Alice Verbose (Must be in a Pastebin link or similar)
+The verbose messages that showed up by using /Alice Alerts in the hover message (Must be in a Pastebin link or similar)
 
 **Video (Recommended)**
 A video showing the false positive in action (https://streamable.com/ or from any other source where the video is non public)
