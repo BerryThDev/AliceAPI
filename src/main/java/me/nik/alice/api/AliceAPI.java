@@ -98,7 +98,20 @@ public interface AliceAPI {
     int getViolations(Player player, String check);
 
     /**
+     * Get the Violations of a Player for a specific Check and Type
+     *
+     * @param player The player to get the Violations from
+     * @param check  The check to get the Violations from
+     * @param type   The check type to get the Violations from
+     * @return The player's Violations for that check
+     */
+    int getViolations(Player player, String check, String type);
+
+    /**
      * Get a player's data for all checks
+     * <p>
+     * (NOTE) You can pass a null player and it'll return a new list with all the available checks and zero
+     * Violations, However this should not be done frequently and can cause perfomance issues.
      *
      * @param player The player
      * @return The player's check data
