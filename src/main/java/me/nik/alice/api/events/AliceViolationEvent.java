@@ -1,6 +1,5 @@
 package me.nik.alice.api.events;
 
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
@@ -21,10 +20,10 @@ public final class AliceViolationEvent extends Event implements Cancellable {
     private boolean cancel = false;
 
     /**
-     * This event will not always be called Async, So beware.
+     * This event will always be called async, Beware.
      */
     public AliceViolationEvent(Player player, String checkName, String description, String type, String information, int vl, int maxVl, boolean experimental) {
-        super(!Bukkit.isPrimaryThread());
+        super(true);
         this.player = player;
         this.checkName = checkName;
         this.description = description;
