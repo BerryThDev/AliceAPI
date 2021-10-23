@@ -23,7 +23,8 @@ public final class AliceViolationEvent extends Event implements Cancellable {
     /**
      * This event will always be called async, Beware.
      */
-    public AliceViolationEvent(Player player, String checkName, String description, String type, String information, int vl, int maxVl, boolean experimental, boolean alert) {
+    public AliceViolationEvent(Player player, String checkName, String description, String type, String information,
+                               int vl, int maxVl, boolean experimental, boolean alert) {
         super(true);
         this.player = player;
         this.checkName = checkName;
