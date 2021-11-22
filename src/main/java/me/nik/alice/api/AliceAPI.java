@@ -24,13 +24,6 @@ public interface AliceAPI {
     boolean isBypassing(Player player);
 
     /**
-     * Update the player's bypass status and check if he has the permission again
-     *
-     * @param player The player
-     */
-    void updateBypass(Player player);
-
-    /**
      * Get if a player is temporarily bypassing without permissions
      *
      * @param player The player
@@ -44,13 +37,6 @@ public interface AliceAPI {
      * @param player The player
      */
     void punish(String player, String reason);
-
-    /**
-     * Send an alert to the Online Admins
-     *
-     * @param message The message
-     */
-    void sendAlert(String message);
 
     /**
      * Register a Punish Animation
